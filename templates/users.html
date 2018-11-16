@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Tools</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> Users </h1>
+
+    <ul>
+      {% for username, wf in userlist.items() %}
+      <li><a href="/user/{{ username }}">{{ username }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% endblock %}
+  </body>
+</html>

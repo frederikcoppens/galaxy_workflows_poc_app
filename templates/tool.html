@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Tool: {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> Tool: {{ title }} </h1>
+
+    <h2> List of workflows containing tool </h2>
+    <ul>
+      {% for workflow in workflows %}
+      <li><a href="/workflow/{{ workflow.key }}">{{ workflow.name }}</a> (<a href="/user/{{ workflow.owner }}">{{ workflow.owner }})</li>
+      {% endfor %}
+    </ul>
+
+    {% endblock %}
+  </body>
+</html>

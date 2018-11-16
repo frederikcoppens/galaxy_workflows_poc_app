@@ -1,0 +1,32 @@
+{
+    "docker_ebfb8f50c6abde6d": {
+        "host": "docker",
+        "id": "ebfb8f50c6abde6d",
+        "key": "docker_ebfb8f50c6abde6d",
+        "name": "myuser2_public_wf",
+        "owner": "myuser2",
+        "tools": [
+            {
+                "id": "sort1",
+                "name": "Sort"
+            }
+        ]
+    },
+    "docker_f597429621d6eb2b": {
+        "host": "docker",
+        "id": "f597429621d6eb2b",
+        "key": "docker_f597429621d6eb2b",
+        "name": "myuser1_public_wf",
+        "owner": "myuser1",
+        "tools": [
+            {
+                "id": "addValue",
+                "name": "Add column"
+            },
+            {
+                "id": "Show beginning1",
+                "name": "Select first"
+            }
+        ]
+    }
+}

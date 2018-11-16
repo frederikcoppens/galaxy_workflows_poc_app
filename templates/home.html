@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block content %}
+<h1> Aim </h1>
+<p> Searching workflows and their tools on public Galaxy instances (from 19.01 onwards) </p>
+
+<p> Through the navigation above you can get a list of workflows and tools available in the Galaxy instances:</p>
+
+<ul>
+{% for name, link in hosts.items() %}
+  <li><a href="{{ link }}">{{ name }}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

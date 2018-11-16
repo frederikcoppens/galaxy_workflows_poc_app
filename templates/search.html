@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Tools</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> Search </h1>
+    <form action="" method="post">
+        {{ form.csrf }}
+
+        <div class="input text">
+            {{ form.keyword.label }} {{ form.keyword }}
+        </div>
+
+        <div class="input submit">
+            <input type="submit" value="Submit" hidden="True" />
+        </div>
+    </form>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li><a href="/{{ message[2] }}">{{ message[1] }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+                <p>No search results found</p>
+        {% endif %}
+    {% endwith %}
+
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Workflow: {{ title }}</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> Workflow: {{ title }} </h1>
+
+    <h2> List of tools </h2>
+    <ol>
+      {% for tool in tools %}
+      <li><a href="/tool/{{ tool.id }}">{{ tool.name }}</a></li>
+      {% endfor %}
+    </ol>
+
+    {% endblock %}
+  </body>
+</html>

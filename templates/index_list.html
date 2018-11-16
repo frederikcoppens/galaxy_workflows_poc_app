@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galaxy Tools</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    <h1> Search index </h1>
+
+    <ul>
+      {% for name, link in full_list.items() %}
+      <li><a href="/{{ link }}">{{ name }}</a></li>
+      {% endfor %}
+    </ul>
+
+    {% endblock %}
+  </body>
+</html>
